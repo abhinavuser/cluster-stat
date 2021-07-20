@@ -25,9 +25,13 @@ ___
 ```bash
 mkdir lv_drivers
 mkdir lv_examples
+mkdir lvgl
 cd lv_drivers
 git pull && git checkout release/v7
 cd .. 
+cd lv_examples
+git pull && git checkout release/v7
+cd ..
 cd lvgl
 git pull && git checkout release/v7
 cd ..
