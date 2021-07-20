@@ -23,9 +23,9 @@ ___
 
 ### configuring libraries:
 ```bash
-mkdir lv_drivers
-mkdir lv_examples
-mkdir lvgl
+git clone https://github.com/littlevgl/lv_drivers.git
+git clone https://github.com/littlevgl/lv_examples.git
+git clone https://github.com/littlevgl/lvgl.git
 cd lv_drivers
 git pull && git checkout release/v7
 cd .. 
