@@ -2,8 +2,10 @@
 simple embedded dashboard written in C++ for linux embedded device, using LVGL graphical library
 
 submodules (yet to be added):
+```
 lvgl/lvgl -> release/v8.1
 lvgl/lv_drivers -> release/v8.1
+```
 
 build instructions:
 ```
