@@ -1,0 +1,7 @@
+#define DISP_BUF_SIZE (128 * 1024)
+
+#define HOR_RES 1080
+#define VER_RES 1920
+
+#define BG_COLOR 0x20222D
+#define FG_COLOR 0x30344F

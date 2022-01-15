@@ -34,4 +34,5 @@ target_include_directories(lv_drivers SYSTEM PUBLIC "libraries/lv_drivers/")
 target_link_libraries(surveillant PRIVATE
     lvgl
     lv_drivers
+    pthread
 )
