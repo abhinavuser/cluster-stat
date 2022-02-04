@@ -1,0 +1,7 @@
+[Unit]
+Description=startup service
+[Service]
+ExecStart=/usr/bin/bash -c /etc/systemd/system/startup.sh
+Type=simple
+[Install]
+WantedBy=default.target

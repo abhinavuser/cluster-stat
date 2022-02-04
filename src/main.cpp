@@ -6,7 +6,7 @@ using namespace display;
 
 int main(){
 
-    std::thread display_thread (disp::display_init);
+    std::thread display_thread (display_init);
 
     std::thread socket_thread (socket_init);
 

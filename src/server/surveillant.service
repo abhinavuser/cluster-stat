@@ -1,0 +1,7 @@
+[Unit]
+Description=Surveillant Server
+[Service]
+ExecStart=/usr/bin/bash -c /etc/systemd/system/surveillant.sh
+Type=simple
+[Install]
+WantedBy=default.target

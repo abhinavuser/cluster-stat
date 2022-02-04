@@ -11,7 +11,7 @@
 #include "libraries/lv_drivers/display/fbdev.h"
 #include "libraries/lv_drivers/indev/evdev.h"
 
-#include "services/display_service/init.hpp"
+#include "services/display_service/display_init.hpp"
 
 #include "assets/config.h"
 
