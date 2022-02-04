@@ -4,7 +4,7 @@ simple embedded dashboard written in C++ for linux embedded device, using LVGL g
 
 
 ### getting start:
-[Building and installation docs]("docs/index.md")
+[Building and installation docs](docs/index.md)
 
 ### queries ?
 create github issue, it will be reponded to as soon as possible
