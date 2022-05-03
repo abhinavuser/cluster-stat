@@ -45,7 +45,7 @@ in `/src/services/socket_service/init.hpp` of the gui app
 
 ```c++
 15 
-16 #define PORT 8080 // change 8080 here to change port
+> 16 #define PORT 8080 // change 8080 here to change port
 17
 ```
 
