@@ -1,13 +1,11 @@
 # Surveillant 
-___
-simple embedded dashboard written in C++ for linux embedded device, using LVGL graphical library
 
+simple embedded dashboard written in C++ for embedded linux devices, using LVGL graphical library
 
 ### getting start:
 [Building and installation docs](docs/index.md)
 
-### queries ?
-create github issue, it will be reponded to as soon as possible
+#### queries ?
+create a github issue, it will be reponded to as soon as possible
 
-PROJECT LICENSED UNDER GPLv3
-
+This project is licensed under the GPLv3 license

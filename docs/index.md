@@ -53,13 +53,10 @@ no return line at the end of the config, it is very sensitive and can return inv
 
 * `theme.json` is the theming config file, it should always have default 
 values and must be present during runtime.
-    * BG COLOR background color
-    * FG COLOR foreground color of chart backgrounds ref. styling.cpp
-    * PRIMARY LINE COLOR (unused as of now)
-    * SECONDARY LINE COLOR (used as the background color of arcs)
+    * `BG COLOR` background color
+    * `FG COLOR` foreground color of chart backgrounds ref. styling.cpp
+    * `PRIMARY_LINE_COLOR` (unused as of now)
+    * `SECONDARY_LINE_COLOR` (used as the background color of arcs)
 
 ## Setting up surveillant server on client devices:
 ref to [surveillant server docs](../src/server/README.md)
-
-### Setting up data extensions
-***this feature is TBD***
