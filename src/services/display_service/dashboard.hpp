@@ -110,7 +110,7 @@ namespace display{
 
             menu_obj.btn_label = lv_label_create(menu_obj.btn);
             lv_obj_set_style_text_font(menu_obj.btn_label, &lv_font_montserrat_28, 0);
-            lv_obj_set_style_text_color(menu_obj.btn_label, lv_color_hex(BTN_FONT_COLOR), 0);
+            lv_obj_set_style_text_color(menu_obj.btn_label, lv_color_hex(PRIMARY_FONT_COLOR), 0);
             lv_label_set_text_fmt(menu_obj.btn_label, "%s", LV_SYMBOL_LOOP);
 
             return menu_obj;
