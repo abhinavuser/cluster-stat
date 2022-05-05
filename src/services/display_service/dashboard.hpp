@@ -86,7 +86,7 @@ namespace display{
             lv_obj_add_event_cb(menu_obj.cpu_chart, grad_draw_event_cb, LV_EVENT_DRAW_PART_BEGIN, NULL);
             lv_obj_add_style(menu_obj.cpu_chart, &chart_style, 0);
             lv_obj_add_style(menu_obj.cpu_chart, &chart_line_style, LV_PART_INDICATOR);
-            lv_obj_set_style_bg_opa(menu_obj.cpu_chart, LV_OPA_20, 0);
+            //lv_obj_set_style_bg_opa(menu_obj.cpu_chart, LV_OPA_20, 0);
             
             menu_obj.cpu_series = lv_chart_add_series(menu_obj.cpu_chart, lv_color_hex(CPU_COLOR), LV_CHART_AXIS_PRIMARY_Y);
 
@@ -98,7 +98,7 @@ namespace display{
             lv_obj_add_event_cb(menu_obj.mem_chart, grad_draw_event_cb, LV_EVENT_DRAW_PART_BEGIN, NULL);
             lv_obj_add_style(menu_obj.mem_chart, &chart_style, 0);
             lv_obj_add_style(menu_obj.mem_chart, &chart_line_style, LV_PART_INDICATOR);
-            lv_obj_set_style_bg_opa(menu_obj.mem_chart, LV_OPA_20, 0);
+            //lv_obj_set_style_bg_opa(menu_obj.mem_chart, LV_OPA_20, 0);
             
             menu_obj.mem_series = lv_chart_add_series(menu_obj.mem_chart, lv_color_hex(MEM_COLOR), LV_CHART_AXIS_PRIMARY_Y);
 
