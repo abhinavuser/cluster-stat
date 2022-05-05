@@ -66,6 +66,8 @@ values and must be present during runtime.
 |`SECONDARY_FONT_COLOR`|secondary font color (other info in node graph)|
 |`MENU_ACCENT_COLOR`|accent color of menu panel|
 |`BTN_COLOR`|color of the buttons (both restart and menu buttons)|
+|`BTN_FONT_COLOR`|color of the button text|
+|`SPINNER_COLOR`|color of the loading spinnner|
 
 ## Setting up surveillant server on client devices:
 refer to [surveillant server docs](../src/server/README.md)

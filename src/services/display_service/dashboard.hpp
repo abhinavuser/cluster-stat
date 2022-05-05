@@ -46,7 +46,7 @@ namespace display{
             lv_arc_set_bg_angles(menu_obj.cpu_arc, 0, 270);
             lv_obj_remove_style(menu_obj.cpu_arc, NULL, LV_PART_KNOB);
             lv_obj_add_style(menu_obj.cpu_arc, &cpu_arc_style, LV_PART_INDICATOR);
-            lv_obj_add_style(menu_obj.cpu_arc, &spinner_style_indicator, LV_PART_MAIN);
+            lv_obj_add_style(menu_obj.cpu_arc, &arc_style, LV_PART_MAIN);
             lv_arc_set_value(menu_obj.cpu_arc, 0);
             lv_obj_align(menu_obj.cpu_arc, LV_ALIGN_CENTER, -(box_size/2 + box_padding), 0);
 
@@ -56,28 +56,25 @@ namespace display{
             lv_arc_set_bg_angles(menu_obj.mem_arc, 0, 270);
             lv_obj_remove_style(menu_obj.mem_arc, NULL, LV_PART_KNOB);
             lv_obj_add_style(menu_obj.mem_arc, &mem_arc_style, LV_PART_INDICATOR);
-            lv_obj_add_style(menu_obj.mem_arc, &spinner_style_indicator, LV_PART_MAIN);
+            lv_obj_add_style(menu_obj.mem_arc, &arc_style, LV_PART_MAIN);
             lv_arc_set_value(menu_obj.mem_arc, 0);
             lv_obj_align(menu_obj.mem_arc, LV_ALIGN_CENTER, box_size/2 + box_padding, 0);
 
             menu_obj.cpu_label = lv_label_create(menu_obj.cpu_arc);
             lv_label_set_recolor(menu_obj.cpu_label, true);
             lv_obj_set_style_text_font(menu_obj.cpu_label, &lv_font_montserrat_20, 0);
-            //lv_obj_align(menu_obj.temp_label, LV_ALIGN_CENTER, 0, 0);
             lv_label_set_text_fmt(menu_obj.cpu_label, "#aaaaaa CPU: 0.00 %%#");
             lv_obj_align(menu_obj.cpu_label, LV_ALIGN_CENTER, 0, 0);
 
             menu_obj.mem_label = lv_label_create(menu_obj.mem_arc);
             lv_label_set_recolor(menu_obj.mem_label, true);
             lv_obj_set_style_text_font(menu_obj.mem_label, &lv_font_montserrat_20, 0);
-            //lv_obj_align(menu_obj.temp_label, LV_ALIGN_CENTER, 0, 0);
             lv_label_set_text_fmt(menu_obj.mem_label, "#aaaaaa RAM: 0 MB /# #aaaaaa 0.00 %%#");
             lv_obj_align(menu_obj.mem_label, LV_ALIGN_CENTER, 0, 0);
 
             menu_obj.temp_label = lv_label_create(tab);
             lv_label_set_recolor(menu_obj.temp_label, true);
             lv_obj_set_style_text_font(menu_obj.temp_label, &lv_font_montserrat_20, 0);
-            //lv_obj_align(menu_obj.temp_label, LV_ALIGN_CENTER, 0, 0);
             lv_label_set_text_fmt(menu_obj.temp_label, "#aaaaaa 0.00 °C#");
             lv_obj_align(menu_obj.temp_label, LV_ALIGN_CENTER, 0, 0);
 
@@ -113,6 +110,7 @@ namespace display{
 
             menu_obj.btn_label = lv_label_create(menu_obj.btn);
             lv_obj_set_style_text_font(menu_obj.btn_label, &lv_font_montserrat_28, 0);
+            lv_obj_set_style_text_color(menu_obj.btn_label, lv_color_hex(BTN_FONT_COLOR), 0);
             lv_label_set_text_fmt(menu_obj.btn_label, "%s", LV_SYMBOL_LOOP);
 
             return menu_obj;

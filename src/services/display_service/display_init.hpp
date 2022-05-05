@@ -49,10 +49,10 @@ namespace display{
     void splash(){        
         lv_obj_t * spinner = lv_spinner_create(lv_scr_act(), 1000, 30);
         lv_obj_set_size(spinner, 60, 60);
-        lv_obj_add_style(spinner, &spinner_style_indicator, LV_PART_MAIN);
+        lv_obj_add_style(spinner, &arc_style, LV_PART_MAIN);
+        lv_obj_add_style(spinner, &spinner_style, LV_PART_INDICATOR);
         lv_obj_set_align(spinner, LV_ALIGN_CENTER);
         lv_obj_set_pos(spinner, 0, HOR_RES/4);
-
         
         for(int i=0;i<500;i++) {
             lv_task_handler();
