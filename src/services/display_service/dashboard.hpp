@@ -91,7 +91,7 @@ namespace display{
             lv_obj_add_style(menu_obj.cpu_chart, &chart_line_style, LV_PART_INDICATOR);
             lv_obj_set_style_bg_opa(menu_obj.cpu_chart, LV_OPA_20, 0);
             
-            menu_obj.cpu_series = lv_chart_add_series(menu_obj.cpu_chart, lv_palette_main(LV_PALETTE_GREEN), LV_CHART_AXIS_PRIMARY_Y);
+            menu_obj.cpu_series = lv_chart_add_series(menu_obj.cpu_chart, lv_color_hex(CPU_COLOR), LV_CHART_AXIS_PRIMARY_Y);
 
             menu_obj.mem_chart = lv_chart_create(menu_obj.mem_arc);
             lv_obj_set_size(menu_obj.mem_chart, round(box_size/1.75), round(box_size/3));
@@ -103,19 +103,18 @@ namespace display{
             lv_obj_add_style(menu_obj.mem_chart, &chart_line_style, LV_PART_INDICATOR);
             lv_obj_set_style_bg_opa(menu_obj.mem_chart, LV_OPA_20, 0);
             
-            menu_obj.mem_series = lv_chart_add_series(menu_obj.mem_chart, lv_palette_main(LV_PALETTE_BLUE), LV_CHART_AXIS_PRIMARY_Y);
+            menu_obj.mem_series = lv_chart_add_series(menu_obj.mem_chart, lv_color_hex(MEM_COLOR), LV_CHART_AXIS_PRIMARY_Y);
 
             menu_obj.btn = lv_btn_create(tab);
             lv_obj_add_event_cb(menu_obj.btn, event_handler, LV_EVENT_ALL, NULL);
-            lv_obj_set_style_bg_color(menu_obj.btn, lv_color_hex(PRIMARY_LINE_COLOR), 0);
+            lv_obj_set_style_bg_color(menu_obj.btn, lv_color_hex(BTN_COLOR), 0);
             lv_obj_set_size(menu_obj.btn, 80, 60);
             lv_obj_align(menu_obj.btn, LV_ALIGN_CENTER, 0, 60);
 
             menu_obj.btn_label = lv_label_create(menu_obj.btn);
             lv_obj_set_style_text_font(menu_obj.btn_label, &lv_font_montserrat_28, 0);
             lv_label_set_text_fmt(menu_obj.btn_label, "%s", LV_SYMBOL_LOOP);
-            lv_obj_center(menu_obj.btn_label);
-        
+
             return menu_obj;
         }
 
@@ -162,11 +161,10 @@ namespace display{
                 lv_obj_set_size(node_obj.status_tag, 20, 20);
                 lv_obj_align(node_obj.status_tag, LV_ALIGN_TOP_LEFT, 10, 10);
                 lv_obj_set_style_border_opa(node_obj.status_tag, LV_OPA_0, 0);
-                lv_obj_set_style_radius(node_obj.status_tag, LV_RADIUS_CIRCLE, 0);
                 lv_obj_set_style_bg_color(node_obj.status_tag, lv_palette_main(LV_PALETTE_GREEN), 0);
 
-                node_obj.series_1 = lv_chart_add_series(node_obj.chart, lv_palette_main(LV_PALETTE_GREEN), LV_CHART_AXIS_PRIMARY_Y);
-                node_obj.series_2 = lv_chart_add_series(node_obj.chart, lv_palette_main(LV_PALETTE_BLUE), LV_CHART_AXIS_PRIMARY_Y);
+                node_obj.series_1 = lv_chart_add_series(node_obj.chart, lv_color_hex(CPU_COLOR), LV_CHART_AXIS_PRIMARY_Y);
+                node_obj.series_2 = lv_chart_add_series(node_obj.chart, lv_color_hex(MEM_COLOR), LV_CHART_AXIS_PRIMARY_Y);
 
                 menu_obj.push_back(node_obj);
                 y_pos+=node_ver + y_padding;
@@ -181,8 +179,11 @@ namespace display{
             lv_obj_set_style_bg_color(tabview, lv_color_hex(BG_COLOR), 0);
 
             lv_obj_t * tab_btns = lv_tabview_get_tab_btns(tabview);
-            lv_obj_set_style_bg_color(tab_btns, lv_color_hex(FG_COLOR), 0);
-            lv_obj_set_style_text_color(tab_btns, lv_color_hex(0xaaaaaa), 0);
+            lv_obj_set_style_bg_color(tab_btns, lv_color_hex(BTN_COLOR), 0);
+            lv_obj_set_style_text_color(tab_btns, lv_color_hex(BTN_FONT_COLOR), 0);
+            lv_obj_set_style_bg_color(tab_btns, lv_color_hex(MENU_ACCENT_COLOR), LV_PART_ITEMS | LV_STATE_CHECKED);
+            lv_obj_set_style_text_color(tab_btns, lv_color_hex(MENU_ACCENT_COLOR), LV_PART_ITEMS | LV_STATE_CHECKED);
+            lv_obj_set_style_border_color(tab_btns, lv_color_hex(MENU_ACCENT_COLOR), LV_PART_ITEMS | LV_STATE_CHECKED);
             lv_obj_set_style_border_side(tab_btns, LV_BORDER_SIDE_BOTTOM, LV_PART_ITEMS | LV_STATE_CHECKED);
 
             lv_obj_t* tab_1 = lv_tabview_add_tab(tabview, "cluster view");
@@ -219,12 +220,16 @@ namespace display{
                 lv_chart_set_next_value(cluster_menu_obj.mem_chart, cluster_menu_obj.mem_series, mem_percent_avg);
 
                 lv_arc_set_value(cluster_menu_obj.cpu_arc, cpu_avg);
-                lv_label_set_text_fmt(cluster_menu_obj.cpu_label, "#aaaaaa CPU: %.2f %%#", cpu_avg);
+                lv_label_set_text_fmt(cluster_menu_obj.cpu_label, "#%s CPU: %.2f %%#", primary_font_color.c_str(), cpu_avg);
 
                 lv_arc_set_value(cluster_menu_obj.mem_arc, mem_percent_avg);
-                lv_label_set_text_fmt(cluster_menu_obj.mem_label, "#aaaaaa RAM: %d MB /# #aaaaaa %.2f %%#", mem_avg, mem_percent_avg);
+                lv_label_set_text_fmt(cluster_menu_obj.mem_label, "#%s RAM: %d MB /# #%s %.2f %%#", 
+                                                                                        primary_font_color.c_str(),
+                                                                                        mem_avg, 
+                                                                                        primary_font_color.c_str(),
+                                                                                        mem_percent_avg);
 
-                lv_label_set_text_fmt(cluster_menu_obj.temp_label, "#aaaaaa %.2f °C#", temp_avg);
+                lv_label_set_text_fmt(cluster_menu_obj.temp_label, "#%s %.2f °C#", primary_font_color.c_str(), temp_avg);
 
                 /* node menu updating */
                 for(int i = 0; i<n ;i++){
@@ -234,16 +239,22 @@ namespace display{
                     lv_chart_set_next_value(node_obj.chart, node_obj.series_1, (int)socket_service::cpu_buf[i]);
                     lv_chart_set_next_value(node_obj.chart, node_obj.series_2, (int)socket_service::mem_percent_buf[i]);
 
-                    lv_label_set_text_fmt(node_obj.label, "#aaaaaa %s@##aaaaaa %s#\n\n"
-                                                            "#444444 CPU: %.2f %%#\n\n"
-                                                            "#444444 MEM: %d MB#\n\n"
-                                                            "#444444 MEM PERCENT: %.2f %%#\n\n"
-                                                            "#444444 TEMP: %.2f °C#", 
+                    lv_label_set_text_fmt(node_obj.label, "#%s %s@##%s %s#\n\n"
+                                                            "#%s CPU: %.2f %%#\n\n"
+                                                            "#%s MEM: %d MB#\n\n"
+                                                            "#%s MEM PERCENT: %.2f %%#\n\n"
+                                                            "#%s TEMP: %.2f °C#",
+                                                                primary_font_color.c_str(), 
                                                                 socket_service::host_id[i].c_str(),
+                                                                primary_font_color.c_str(),
                                                                 socket_service::ip_addresses[i].c_str(),
-                                                                socket_service::cpu_buf[i], 
+                                                                secondary_font_color.c_str(),
+                                                                socket_service::cpu_buf[i],
+                                                                secondary_font_color.c_str(), 
                                                                 socket_service::mem_buf[i]/1000,
+                                                                secondary_font_color.c_str(),
                                                                 socket_service::mem_percent_buf[i],
+                                                                secondary_font_color.c_str(),
                                                                 socket_service::temp_buf[i]/1000
                                                                 );
 

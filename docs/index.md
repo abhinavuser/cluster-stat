@@ -53,10 +53,19 @@ no return line at the end of the config, it is very sensitive and can return inv
 
 * `theme.json` is the theming config file, it should always have default 
 values and must be present during runtime.
-    * `BG COLOR` background color
-    * `FG COLOR` foreground color of chart backgrounds ref. styling.cpp
-    * `PRIMARY_LINE_COLOR` (unused as of now)
-    * `SECONDARY_LINE_COLOR` (used as the background color of arcs)
+
+|json attribute|responsible for coloring:|
+|:------------|:-----------------------|
+|`BG_COLOR`|Background color|
+|`ARC_BG_COLOR`|Background color of arc gauges (also colors mini chart on cluster view)|
+|`CHART_BG_COLOR`|Background color of measuring charts|
+|`CHART_LINE_COLOR`|color of the marking lines and borders of graphs|
+|`CPU_COLOR`|color of cpu gauge and charts|
+|`MEM_COLOR`|color of memory gauge and charts|
+|`PRIMARY_FONT_COLOR`|primary font color|
+|`SECONDARY_FONT_COLOR`|secondary font color (other info in node graph)|
+|`MENU_ACCENT_COLOR`|accent color of menu panel|
+|`BTN_COLOR`|color of the buttons (both restart and menu buttons)|
 
 ## Setting up surveillant server on client devices:
-ref to [surveillant server docs](../src/server/README.md)
+refer to [surveillant server docs](../src/server/README.md)

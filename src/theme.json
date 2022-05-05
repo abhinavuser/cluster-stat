@@ -1,6 +1,12 @@
 {
-    "FG_COLOR":"2a2a2a",
     "BG_COLOR":"0x212121",
-    "PRIMARY_LINE_COLOR":"0x323232",
-    "SECONDARY_LINE_COLOR":"2a2a2a"
+    "ARC_BG_COLOR":"2a2a2a",
+    "CHART_BG_COLOR":"2a2a2a",
+    "CHART_LINE_COLOR":"999999",
+    "CPU_COLOR":"aaaaff",
+    "MEM_COLOR":"aaffaa",
+    "PRIMARY_FONT_COLOR":"f0f0f0",
+    "SECONDARY_FONT_COLOR":"aaaaaa",
+    "MENU_ACCENT_COLOR":"aaaaaa",
+    "BTN_COLOR":"2a2a2a"
 }
