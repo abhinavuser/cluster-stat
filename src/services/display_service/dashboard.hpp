@@ -257,10 +257,10 @@ namespace display{
                                                                 );
 
                     if(socket_service::brownout_buf[i]){
-                        lv_obj_set_style_bg_color(node_obj.status_tag, lv_palette_main(LV_PALETTE_RED), 0);
+                        lv_obj_set_style_bg_color(node_obj.status_tag, lv_color_hex(OFFLINE_STATE_COLOR), 0);
                     }
                     else{
-                        lv_obj_set_style_bg_color(node_obj.status_tag, lv_palette_main(LV_PALETTE_GREEN), 0);
+                        lv_obj_set_style_bg_color(node_obj.status_tag, lv_color_hex(ONLINE_STATE_COLOR), 0);
                     }
                 }
 

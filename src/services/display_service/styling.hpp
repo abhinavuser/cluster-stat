@@ -75,6 +75,8 @@ namespace display
     int BTN_COLOR;
     int BTN_FONT_COLOR;
     int SPINNER_COLOR;
+    int ONLINE_STATE_COLOR;
+    int OFFLINE_STATE_COLOR;
 
     std::string bg_color;
     std::string arc_bg_color;
@@ -88,6 +90,8 @@ namespace display
     std::string btn_color;
     std::string btn_font_color;
     std::string spinner_color;
+    std::string online_state_color;
+    std::string offline_state_color;
 
     void style_init()
     {
@@ -117,6 +121,8 @@ namespace display
         btn_color = theme_config["BTN_COLOR"];
         btn_font_color = theme_config["BTN_FONT_COLOR"];
         spinner_color = theme_config["SPINNER_COLOR"];
+        online_state_color = theme_config["ONLINE_STATE_COLOR"];
+        offline_state_color = theme_config["OFFLINE_STATE_COLOR"];
 
         BG_COLOR = std::stoi(bg_color, nullptr, 16);
         ARC_BG_COLOR = std::stoi(arc_bg_color, nullptr, 16);
@@ -130,6 +136,8 @@ namespace display
         BTN_COLOR = std::stoi(btn_color, nullptr, 16);
         BTN_FONT_COLOR = std::stoi(btn_font_color, nullptr, 16);
         SPINNER_COLOR = std::stoi(spinner_color, nullptr, 16);
+        ONLINE_STATE_COLOR = std::stoi(online_state_color, nullptr, 16);
+        OFFLINE_STATE_COLOR = std::stoi(offline_state_color, nullptr, 16);
 
         /*LVGL style sheets*/
         lv_style_init(&background_style);

@@ -41,7 +41,7 @@ in `/src/main.rs` in the server
 ```
 
 and 
-in `/src/services/socket_service/init.hpp` of the gui app
+in `/src/services/socket_service/socket_init.hpp` of the gui app
 
 ```c++
 15 

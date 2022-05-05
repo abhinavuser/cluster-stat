@@ -68,6 +68,8 @@ values and must be present during runtime.
 |`BTN_COLOR`|color of the buttons (both restart and menu buttons)|
 |`BTN_FONT_COLOR`|color of the button text|
 |`SPINNER_COLOR`|color of the loading spinnner|
+|`ONLINE_STATE_COLOR`|color for displaying online activity|
+|`OFFLINE_STATE_COLOR`|color for displaying offline activity|
 
 ## Setting up surveillant server on client devices:
 refer to [surveillant server docs](../src/server/README.md)
