@@ -7,7 +7,7 @@
 #include "../libraries/lv_drivers/display/fbdev.h"
 #include "../libraries/lv_drivers/indev/evdev.h"
 
-#include "../assets/config.h"
+#include "../config/config.h"
 #include "dashboard.hpp"
 
 namespace display{

@@ -47,6 +47,9 @@ eg. `/home/foo`
 
 ### Configuring Surveillant:
 
+* to adjust for other screen resolutions, change the resolution configs in `src/config/config.h`,
+  (in DISP_BUF_SIZE, make sure to change the 1080 to whatever your horizontal resolution is)
+
 * replace the default targets to be connect to in `config.txt`.
 values must be space seperated pairs of hostname and ipv4 address,
 no return line at the end of the config, it is very sensitive and can return invalid address error during runtime.

@@ -13,7 +13,7 @@
 
 #include "services/display_service/display_init.hpp"
 
-#include "assets/config.h"
+#include "config/config.h"
 
 uint32_t custom_tick_get(void){
     static uint64_t start_ms = 0;
