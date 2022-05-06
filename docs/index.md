@@ -71,5 +71,12 @@ values and must be present during runtime.
 |`ONLINE_STATE_COLOR`|color for displaying online activity|
 |`OFFLINE_STATE_COLOR`|color for displaying offline activity|
 
+some preconfigured themes are available in the `src/themes/` folder, you can use them replace the current `theme.json` file.
+
+for example:
+```bash
+cp ../themes/<theme_name>.json $HOME/theme.json
+```
+
 ## Setting up surveillant server on client devices:
 refer to [surveillant server docs](../src/server/README.md)

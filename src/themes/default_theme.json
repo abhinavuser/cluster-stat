@@ -1,0 +1,16 @@
+{
+    "BG_COLOR":"212121",
+    "ARC_BG_COLOR":"2a2a2a",
+    "CHART_BG_COLOR":"2a2a2a",
+    "CHART_LINE_COLOR":"2a2a2a",
+    "CPU_COLOR":"38ff95",
+    "MEM_COLOR":"3895ff",
+    "PRIMARY_FONT_COLOR":"f0f0f0",
+    "SECONDARY_FONT_COLOR":"444444",
+    "MENU_ACCENT_COLOR":"3895ff",
+    "BTN_COLOR":"2a2a2a",
+    "BTN_FONT_COLOR":"808080",
+    "SPINNER_COLOR":"38ff95",
+    "ONLINE_STATE_COLOR":"38ff95",
+    "OFFLINE_STATE_COLOR":"ff3838"
+}
