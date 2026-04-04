@@ -1,8 +1,8 @@
-## Surveillant Docs
+## ClusterStat Docs
 
 **Clone the project:**
 ```
-git clone https://github.com/zephyrlabs/surveillant.git
+git clone https://github.com/abhinavuser/cluster-stat.git
 ```
 
 **build instructions:**
@@ -14,7 +14,7 @@ cd build && make -j
 
 **running target:**
 ```sh
-./surveillant
+./cluster-stat
 ```
 
 **blinking linux fbcon cursor can be disabled with:**
@@ -22,10 +22,10 @@ cd build && make -j
 echo 0 > /sys/class/graphics/fbcon/cursor_blink
 ```
 
-**surveillant can be integrated with the system by creating a systemd service.**
+**cluster-stat can be integrated with the system by creating a systemd service.**
 
 ```sh
-cp surveillant $HOME/
+cp cluster-stat $HOME/
 cp ../theme.json $HOME/
 cp ../config.txt $HOME/
 cp ../startup.sh /etc/systemd/system/
@@ -45,7 +45,7 @@ systemctl start startup
 eg. `/home/foo` 
 
 
-### Configuring Surveillant:
+### Configuring ClusterStat:
 
 * to adjust for other screen resolutions, change the resolution configs in `src/config/config.h`,
   (in DISP_BUF_SIZE, make sure to change the 1080 to whatever your horizontal resolution is)
@@ -81,5 +81,5 @@ for example:
 cp ../themes/<theme_name>.json $HOME/theme.json
 ```
 
-## Setting up surveillant server on client devices:
-refer to [surveillant server docs](../src/server/README.md)
+## Setting up cluster-stat server on client devices:
+refer to [cluster-stat server docs](../src/server/README.md)

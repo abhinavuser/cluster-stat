@@ -53,6 +53,6 @@ pub fn stream_init(){
 }
 
 fn main() {
-    println!("Started Server...");
+    println!("ClusterStat Server started...");
     stream_init();
 }

@@ -1,5 +1,5 @@
 [Unit]
-Description=startup service
+Description=ClusterStat Dashboard
 [Service]
 ExecStart=/usr/bin/bash -c /etc/systemd/system/startup.sh
 Type=simple

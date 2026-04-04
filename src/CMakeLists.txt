@@ -5,10 +5,10 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-project(surveillant)
+project(cluster-stat)
 
 add_executable(
-    surveillant
+    cluster-stat
     main.cpp
 )
 
@@ -31,7 +31,7 @@ target_sources(lv_drivers PRIVATE
 target_link_libraries(lv_drivers PUBLIC lvgl)
 target_include_directories(lv_drivers SYSTEM PUBLIC "libraries/lv_drivers/")
 
-target_link_libraries(surveillant PRIVATE
+target_link_libraries(cluster-stat PRIVATE
     lvgl
     lv_drivers
     pthread

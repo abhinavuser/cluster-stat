@@ -1,0 +1,7 @@
+[Unit]
+Description=ClusterStat Server
+[Service]
+ExecStart=/usr/bin/bash -c /etc/systemd/system/cluster-stat.sh
+Type=simple
+[Install]
+WantedBy=default.target

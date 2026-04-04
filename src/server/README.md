@@ -1,5 +1,5 @@
-# Surveillant Server
-client runtime for monitoring stats using surveillant dashboard
+# ClusterStat Server
+client runtime for monitoring stats using cluster-stat dashboard
 
 **build instructions:**
 ```sh
@@ -8,18 +8,18 @@ cargo build --release
 
 **install with respective systemd service:**
 ```sh
-cp target/release/surveillant-server $HOME
-cp surveillant.service /etc/systemd/system/
-cp surveillant.sh /etc/systemd/system/
-chmod +x /etc/systemd/system/surveillant.sh
-systemctl enable surveillant
-systemctl start surveillant
+cp target/release/cluster-stat-server $HOME
+cp cluster-stat.service /etc/systemd/system/
+cp cluster-stat.sh /etc/systemd/system/
+chmod +x /etc/systemd/system/cluster-stat.sh
+systemctl enable cluster-stat
+systemctl start cluster-stat
 ```
 this should enable and run the server and bring it up online when starting up the server
 
 check status logs of connections and disconnections with the server: 
 ```sh
-systemctl status surveillant
+systemctl status cluster-stat
 ```
 
 **Want to create your own custom client server ?**

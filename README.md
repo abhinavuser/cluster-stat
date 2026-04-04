@@ -1,14 +1,12 @@
-# Surveillant 
+# ClusterStat
 
-simple embedded dashboard written in C++ for embedded linux devices, using LVGL graphical library
+Simple embedded dashboard written in C++ for embedded Linux devices, using LVGL graphical library to monitor cluster health in real-time.
 
-### getting start:
+### Getting Started:
 [Building and installation docs](docs/index.md)
 
-### How does it work ?
+### How does it work?
 [Working System Model](docs/working.pdf)
 
-#### queries ?
-create a github issue, it will be reponded to as soon as possible
-
-This project is licensed under the GPLv3 license
+#### Queries?
+Create a GitHub issue, it will be responded to as soon as possible.
