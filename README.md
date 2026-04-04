@@ -1,8 +1,7 @@
-# surveillant
+# ClusterStat
 ## Cluster Stat Management Project
 
-![surveillant](lv_resources/surveillant.png "surveillant")
-surveillant ~(french): supervisor
+![cluster-stat](lv_resources/surveillant.png "cluster-stat")
 
 made with LVGL configured to work with /dev/fbX on Linux.
 
@@ -52,11 +51,11 @@ make -F Makefile
 make clean
 ```
 ___ 
-## Configuring surveillant to your system:
+## Configuring ClusterStat to your system:
 
 ### screen configuration:
 
-to configure surveillant to your screen you must configure it to the specific framebuffer screen and the touch input on your system
+to configure cluster-stat to your screen you must configure it to the specific framebuffer screen and the touch input on your system
 
 check `lv_drv_conf.h` for something like:
 

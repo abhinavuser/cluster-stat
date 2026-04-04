@@ -191,7 +191,7 @@ int about_refresh(int flag, int nodes){
     }
 
     lv_label_set_text_fmt(cluster_stats_shadow, 
-    "Surveillant system\n\n"
+    "ClusterStat system\n\n"
     "System time: %d:%c%c:%c%c \n\n"
     "Cluster mode enabled: %d \n"
     "Number of nodes: %d \n\n"
